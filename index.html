@@ -1,2 +1,251 @@
-<h1> Arinze Nkeokwelu</h1>
-<h3>Welcome to my page!</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Data Analyst Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0a0f1c;
+    --card: #111827;
+    --accent: #00f5c4;
+    --accent2: #3b82f6;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top left, #0f172a, #0a0f1c 60%);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Animated Grid Background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveGrid 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveGrid {
+    from { transform: translate(0,0); }
+    to { transform: translate(-40px,-40px); }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--muted);
+    max-width: 600px;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 40px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border: none;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--accent);
+}
+
+/* Sections */
+section {
+    padding: 6rem 10%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Animated Stats */
+.stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Energy Data Analyst</h1>
+    <p>
+        Transforming complex energy datasets into strategic insights. 
+        Specialised in forecasting, optimisation, and sustainability analytics.
+    </p>
+    <button class="btn" onclick="scrollToSection('projects')">View My Work</button>
+</header>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I analyse energy markets, consumption trends, and renewable performance using Python, SQL, and data visualisation tools.
+        My focus is on turning energy data into actionable intelligence for optimisation, forecasting, and sustainability.
+    </p>
+</section>
+
+<section id="stats">
+    <h2 class="section-title">Impact</h2>
+    <div class="stats">
+        <div>
+            <div class="stat" data-target="15">0</div>
+            <p>Forecasting Models Built</p>
+        </div>
+        <div>
+            <div class="stat" data-target="30">0</div>
+            <p>Energy Dashboards Deployed</p>
+        </div>
+        <div>
+            <div class="stat" data-target="100">0</div>
+            <p>Million kWh Analysed</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Renewable Forecasting Model</h3>
+            <p>Built a machine learning model predicting solar and wind output variability using time-series analysis.</p>
+        </div>
+        <div class="card">
+            <h3>Energy Consumption Dashboard</h3>
+            <p>Interactive dashboard visualising peak demand trends and optimisation opportunities for commercial clients.</p>
+        </div>
+        <div class="card">
+            <h3>Carbon Intensity Analysis</h3>
+            <p>Evaluated emissions data to optimise supply mix and reduce operational carbon footprint.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: yourname@email.com</p>
+    <p>GitHub: github.com/yourusername</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<footer>
+    © 2026 Energy Data Analyst Portfolio
+</footer>
+
+<script>
+// Scroll
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Animated Counter
+const counters = document.querySelectorAll('.stat');
+
+const speed = 100;
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCount();
+});
+</script>
+
+</body>
+</html>
