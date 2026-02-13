@@ -172,6 +172,9 @@ section {
 .card p {
     color: var(--muted);
     font-size: 0.95rem;
+    text-align: justify;      /* Makes the paragraph fill the width of the card */
+    line-height: 1.6;         /* Adds readability */
+    margin-bottom: 1.5rem;
 }
 
 /* ============================= */
