@@ -95,6 +95,21 @@ header .btn:hover {
     box-shadow: 0 0 25px var(--accent);
 }
 
+header .profile-pic {
+    width: 140px;           /* Adjust size */
+    height: 140px;
+    border-radius: 50%;     /* Circular portrait */
+    object-fit: cover;      /* Crop to fit nicely */
+    border: 3px solid var(--accent); /* Optional glowing border */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent);
+}
+
 .btn {
     margin-top: 2rem;
     padding: 0.9rem 1.8rem;
@@ -190,14 +205,13 @@ footer {
 <body>
 
 <header>
+    <img src="profile.jpg" alt="Arinze Nkeokwelu" class="profile-pic">
     <h1>Arinze Nkeokwelu</h1>
     <p class="subtitle">(Energy Data Analyst, Electrical Engineer)</p>
-    
     <p class="intro">
         Transforming complex energy datasets into strategic insights. 
         Specialised in forecasting, optimisation, and sustainability analytics.
     </p>
-    
     <button class="btn" onclick="scrollToSection('projects')">View My Work</button>
 </header>
 
